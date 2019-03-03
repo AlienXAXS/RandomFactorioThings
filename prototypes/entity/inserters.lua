@@ -41,8 +41,8 @@ data:extend({
     },
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
-    energy_per_movement = 15000,
-    energy_per_rotation = 15000,
+    energy_per_movement = "15kW",
+    energy_per_rotation = "15kW",
     energy_source =
     {
       type = "electric",
