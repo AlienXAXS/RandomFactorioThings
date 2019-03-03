@@ -121,7 +121,7 @@ data:extend({
 					animation_speed = 0.5,
 					direction_count = 1,
 					shift = util.by_pixel(3.75, -1.25),
-					run_mode = "forward-then-backward",      
+					run_mode = "forward-then-backward",
 					scale = 0.5
 				}
 			},
@@ -689,7 +689,7 @@ data:extend({
         }
       }
     },
-    
+
     input_fluid_patch_window_flow_sprites =
     {
       {
@@ -876,7 +876,7 @@ data:extend({
         }
       },
     },
-    
+
     mining_speed = 0.5,
     energy_source =
     {
@@ -901,7 +901,7 @@ data:extend({
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
     fast_replaceable_group = "mining-drill",
-    
+
 	circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
     circuit_connector_sprites = circuit_connector_definitions["electric-mining-drill"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance
