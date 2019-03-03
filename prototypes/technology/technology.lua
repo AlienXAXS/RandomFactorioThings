@@ -77,12 +77,12 @@ data:extend({
 		unit =
 		{
 			count = 100,
-			ingredients = {{"science-pack-1", 1},{"science-pack-2", 1}},
+			ingredients = {{"automation-science-pack", 1},{"logistic-science-pack", 1}},
 			time = 1
 		},
 		order = "c-a"
 	},
-  
+
 	{
 		type = "technology",
 		name = "nuclear-automation",
@@ -133,16 +133,16 @@ data:extend({
 			count = 500,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
-				{"high-tech-science-pack", 1}
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 35
 		},
 		order = "e-a-b"
 	},
-  
+
 	{
 		type = "technology",
 		name = "speed-module-4",
@@ -161,17 +161,17 @@ data:extend({
 			count = 400,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
-				{"high-tech-science-pack", 1}
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"utility-science-pack", 1}
 			},
 			time = 60
 		},
 		upgrade = true,
 		order = "i-c-c"
 	},
-  
+
 	{
 		type = "technology",
 		name = "productivity-module-4",
@@ -190,9 +190,9 @@ data:extend({
 			count = 400,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"production-science-pack", 1}
 			},
 			time = 60
@@ -200,7 +200,7 @@ data:extend({
 		upgrade = true,
 		order = "i-c-c"
 	},
-  
+
 	{
 		type = "technology",
 		name = "effectivity-module-4",
@@ -219,9 +219,9 @@ data:extend({
 			count = 400,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"production-science-pack", 1}
 			},
 			time = 60
@@ -229,7 +229,7 @@ data:extend({
 		upgrade = true,
 		order = "i-c-c"
 	},
-  
+
 	{
 		type = "technology",
 		name = "merged-modules",
@@ -241,14 +241,14 @@ data:extend({
 			count = 200,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1}
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1}
 			},
 			time = 30
 		},
 		order = "i-a"
 	},
-  
+
 	{
 		type = "technology",
 		name = "compresser",
@@ -273,12 +273,12 @@ data:extend({
 		unit =
 		{
 			count = 90,
-			ingredients = {{"science-pack-1", 1},{"science-pack-2", 1}},
+			ingredients = {{"automation-science-pack", 1},{"logistic-science-pack", 1}},
 			time = 1
 		},
 		order = "c-a"
 	},
-  
+
 	{
 		type = "technology",
 		name = "nuclear-logistics",
@@ -305,9 +305,9 @@ data:extend({
 			count = 500,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 				{"production-science-pack", 1}
 			},
 			time = 15
