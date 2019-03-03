@@ -1,8 +1,34 @@
 require "util"
 require("merged-module")
 require("module")
+require("gun")
+require("ammo")
 
 local items = {}
+
+local data_analyzer = util.table.deepcopy(data.raw["item"]["assembling-machine-1"])
+data_analyzer.name = "data-analyzer"
+data_analyzer.place_result = "data-analyzer"
+data_analyzer.icon = "__RandomFactorioThings__/graphics/icons/data-analyzer.png"
+table.insert(items, data_analyzer)
+
+local very_long_range_rocket_turret = util.table.deepcopy(data.raw["item"]["artillery-turret"])
+very_long_range_rocket_turret.name = "very-long-range-rocket-turret"
+very_long_range_rocket_turret.place_result = "very-long-range-rocket-turret"
+very_long_range_rocket_turret.icon = "__RandomFactorioThings__/graphics/icons/very-long-range-rocket-turret.png"
+table.insert(items, very_long_range_rocket_turret)
+
+local very_long_range_rocket_wagon = util.table.deepcopy(data.raw["item-with-entity-data"]["artillery-wagon"])
+very_long_range_rocket_wagon.name = "very-long-range-rocket-wagon"
+very_long_range_rocket_wagon.place_result = "very-long-range-rocket-wagon"
+very_long_range_rocket_wagon.icon = "__RandomFactorioThings__/graphics/icons/very-long-range-rocket-wagon.png"
+table.insert(items, very_long_range_rocket_wagon)
+
+local nuclear_long_handed_inserter = util.table.deepcopy(data.raw["item"]["long-handed-inserter"])
+nuclear_long_handed_inserter.name = "nuclear-long-handed-inserter"
+nuclear_long_handed_inserter.place_result = "nuclear-long-handed-inserter"
+nuclear_long_handed_inserter.icon = "__RandomFactorioThings__/graphics/icons/nuclear-long-handed-inserter.png"
+table.insert(items, nuclear_long_handed_inserter)
 
 local nuclear_logistic_robot = util.table.deepcopy(data.raw["item"]["logistic-robot"])
 nuclear_logistic_robot.name = "nuclear-logistic-robot"
@@ -94,6 +120,13 @@ local raw_nuclear_metal = util.table.deepcopy(nuclear_metal)
 raw_nuclear_metal.name = "raw-nuclear-metal"
 raw_nuclear_metal.icon = "__RandomFactorioThings__/graphics/icons/raw-nuclear-metal.png"
 table.insert(items, raw_nuclear_metal)
+
+local map_data = util.table.deepcopy(data.raw["item"]["low-density-structure"])
+map_data.name = "map-data"
+map_data.icon = "__RandomFactorioThings__/graphics/icons/map-data.png"
+map_data.order = "o[map-data]"
+map_data.stack_size = 50
+table.insert(items, map_data)
 
 data:extend(items)
 

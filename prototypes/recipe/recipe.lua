@@ -2,28 +2,132 @@ require "util"
 
 local recipes = {}
 
+local long_range_rocket_launcher = util.table.deepcopy(data.raw["recipe"]["rocket-launcher"])
+long_range_rocket_launcher.name = "long-range-rocket-launcher"
+long_range_rocket_launcher.result = "long-range-rocket-launcher"
+long_range_rocket_launcher.ingredients = {
+	{"iron-plate", 50},
+	{"iron-gear-wheel", 10},
+	{"processing-unit", 5}
+}
+table.insert(recipes, long_range_rocket_launcher)
+
+local long_range_rocket = util.table.deepcopy(data.raw["recipe"]["rocket"])
+long_range_rocket.name = "long-range-rocket"
+long_range_rocket.result = "long-range-rocket"
+long_range_rocket.ingredients = {
+	{"processing-unit", 1},
+	{"explosives", 2},
+	{"iron-plate", 20}
+}
+table.insert(recipes, long_range_rocket)
+
+local explosive_long_range_rocket = util.table.deepcopy(data.raw["recipe"]["explosive-rocket"])
+explosive_long_range_rocket.name = "explosive-long-range-rocket"
+explosive_long_range_rocket.result = "explosive-long-range-rocket"
+explosive_long_range_rocket.ingredients = {
+	{"long-range-rocket", 1},
+	{"explosives", 5}
+}
+table.insert(recipes, explosive_long_range_rocket)
+
+local very_long_range_rocket = util.table.deepcopy(long_range_rocket)
+very_long_range_rocket.name = "very-long-range-rocket"
+very_long_range_rocket.result = "very-long-range-rocket"
+very_long_range_rocket.ingredients = {
+	{"map-data", 1},
+	{"long-range-rocket", 10}
+}
+table.insert(recipes, very_long_range_rocket)
+
+local explosive_very_long_range_rocket = util.table.deepcopy(explosive_long_range_rocket)
+explosive_very_long_range_rocket.name = "explosive-very-long-range-rocket"
+explosive_very_long_range_rocket.result = "explosive-very-long-range-rocket"
+explosive_very_long_range_rocket.ingredients = {
+	{"map-data", 1},
+	{"explosive-long-range-rocket", 10},
+}
+table.insert(recipes, explosive_very_long_range_rocket)
+
+local nuclear_long_handed_inserter = util.table.deepcopy(data.raw["recipe"]["long-handed-inserter"])
+nuclear_long_handed_inserter.name = "nuclear-long-handed-inserter"
+nuclear_long_handed_inserter.result = "nuclear-long-handed-inserter"
+nuclear_long_handed_inserter.ingredients = {
+	{"nuclear-inserter", 1},
+	{"iron-gear-wheel", 3},
+	{"nuclear-metal", 2},
+}
+table.insert(recipes, nuclear_long_handed_inserter)
+
 local nuclear_flying_robot_frame = util.table.deepcopy(data.raw["recipe"]["flying-robot-frame"])
-	nuclear_flying_robot_frame.name = "nuclear-flying-robot-frame"
-	nuclear_flying_robot_frame.result = "nuclear-flying-robot-frame"
-	nuclear_flying_robot_frame.energy_required = 30
-	nuclear_flying_robot_frame.ingredients = {{"electric-engine-unit", 1}, {"battery", 4}, {"nuclear-metal", 5}, {"electronic-circuit", 5}}
+nuclear_flying_robot_frame.name = "nuclear-flying-robot-frame"
+nuclear_flying_robot_frame.result = "nuclear-flying-robot-frame"
+nuclear_flying_robot_frame.energy_required = 30
+nuclear_flying_robot_frame.ingredients = {{"electric-engine-unit", 1}, {"battery", 4}, {"nuclear-metal", 5}, {"electronic-circuit", 5}}
 table.insert(recipes, nuclear_flying_robot_frame)
 
 local nuclear_logistic_robot = util.table.deepcopy(data.raw["recipe"]["logistic-robot"])
-	nuclear_logistic_robot.name = "nuclear-logistic-robot"
-	nuclear_logistic_robot.result = "nuclear-logistic-robot"
-	nuclear_logistic_robot.ingredients[1][1] = "nuclear-flying-robot-frame"
+nuclear_logistic_robot.name = "nuclear-logistic-robot"
+nuclear_logistic_robot.result = "nuclear-logistic-robot"
+nuclear_logistic_robot.ingredients[1][1] = "nuclear-flying-robot-frame"
 table.insert(recipes, nuclear_logistic_robot)
 
 local nuclear_construction_robot = util.table.deepcopy(data.raw["recipe"]["construction-robot"])
-	nuclear_construction_robot.name = "nuclear-construction-robot"
-	nuclear_construction_robot.result = "nuclear-construction-robot"
-	nuclear_construction_robot.ingredients[1][1] = "nuclear-flying-robot-frame"
+nuclear_construction_robot.name = "nuclear-construction-robot"
+nuclear_construction_robot.result = "nuclear-construction-robot"
+nuclear_construction_robot.ingredients[1][1] = "nuclear-flying-robot-frame"
 table.insert(recipes, nuclear_construction_robot)
+
+local data_analyzer = util.table.deepcopy(data.raw["recipe"]["assembling-machine-1"])
+data_analyzer.name = "data-analyzer"
+data_analyzer.result = "data-analyzer"
+data_analyzer.ingredients = {
+	{"processing-unit", 30},
+	{"advanced-circuit", 50},
+	{"steel-plate", 50},
+	{"iron-plate", 50}
+}
+table.insert(recipes, data_analyzer)
+
+local very_long_range_rocket_turret = util.table.deepcopy(data.raw["recipe"]["artillery-turret"])
+very_long_range_rocket_turret.name = "very-long-range-rocket-turret"
+very_long_range_rocket_turret.result = "very-long-range-rocket-turret"
+very_long_range_rocket_turret.ingredients = {
+	{"processing-unit", 20},
+	{"advanced-circuit", 50},
+	{"steel-plate", 100},
+	{"iron-plate", 50}
+}
+table.insert(recipes, very_long_range_rocket_turret)
+
+local very_long_range_rocket_wagon = util.table.deepcopy(data.raw["recipe"]["artillery-wagon"])
+very_long_range_rocket_wagon.name = "very-long-range-rocket-wagon"
+very_long_range_rocket_wagon.result = "very-long-range-rocket-wagon"
+very_long_range_rocket_wagon.ingredients = {
+	{"very-long-range-rocket-turret", 1},
+	{"engine-unit", 50},
+	{"iron-gear-wheel", 10},
+	{"steel-plate", 50}
+}
+table.insert(recipes, very_long_range_rocket_wagon)
 
 data:extend(recipes)
 
 data:extend({
+	{
+		type = "recipe",
+		name = "map-data",
+		enabled = false,
+		ingredients = {
+			{"space-science-pack", 500},
+			{"processing-unit", 1}
+		},
+		result = "map-data",
+		result_count = 5,
+		energy_required = 60,
+		category = "data-analysis"
+	},
+
 	{
 		type = "recipe",
 		name = "JohnTheCF-furnace",

@@ -10,5 +10,9 @@ data:extend({
 	{
 		type = "recipe-category",
 		name = "basic-grinding"
+	},
+	{
+		type = "recipe-category",
+		name = "data-analysis"
 	}
 })

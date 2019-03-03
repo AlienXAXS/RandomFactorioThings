@@ -1,5 +1,6 @@
 require("prototypes.categories.recipe-category")
 require("prototypes.categories.module-category")
+require("prototypes.categories.ammo-category")
 require("prototypes.entity.entities")
 require("prototypes.item.item")
 require("prototypes.recipe.recipe")

@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 26.02.2019
+  Changes:
+    - Update to 0.17
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 30.10.2018
+  Major Features:
+    - Added long range rockets and long range rocket launcher.
+    - Added intercontinental rockets and intercontinental rocket launcher (turret).
+    - Added intercontinental rocket launcher wagon
+    - Added data analyzer. For now it used only to craft map data.
+  Minor Features:
+    - Added descriptions for most items on both languages.
+---------------------------------------------------------------------------------------------------
 Version: 0.14.2 - 0.14.4
 Date: 22.10.2018 - 23.10.2018
   Fixes:

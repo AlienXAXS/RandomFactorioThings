@@ -1,3 +1,62 @@
+require "util"
+
+require("module-technology")
+
+local technologies = {}
+
+table.insert(data.raw["technology"]["automation"].effects, {type = "unlock-recipe", recipe = "data-analyzer"})
+
+local long_range_rocketry = util.table.deepcopy(data.raw["technology"]["rocketry"])
+long_range_rocketry.name = "long-range-rocketry"
+long_range_rocketry.icon = "__RandomFactorioThings__/graphics/technology/long-range-rocketry.png"
+long_range_rocketry.effects = {
+	{
+		type = "unlock-recipe",
+		recipe = "long-range-rocket-launcher"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "long-range-rocket"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "explosive-long-range-rocket"
+	}
+}
+long_range_rocketry.prerequisites = {"rocketry"}
+long_range_rocketry.unit.count = 800
+table.insert(technologies, long_range_rocketry)
+
+local very_long_range_rocketry = util.table.deepcopy(long_range_rocketry)
+very_long_range_rocketry.name = "very-long-range-rocketry"
+very_long_range_rocketry.effects = {
+	{
+		type = "unlock-recipe",
+		recipe = "very-long-range-rocket"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "explosive-very-long-range-rocket"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "very-long-range-rocket-turret"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "very-long-range-rocket-wagon"
+	},
+	{
+		type = "unlock-recipe",
+		recipe = "map-data"
+	}
+}
+very_long_range_rocketry.prerequisites = {"long-range-rocketry", "artillery"}
+very_long_range_rocketry.unit.count = 1500
+table.insert(technologies, very_long_range_rocketry)
+
+data:extend(technologies)
+
 data:extend({
 	{
 		type = "technology",
@@ -34,6 +93,10 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "nuclear-assembling-machine"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "nuclear-long-handed-inserter"
 			},
 			{
 				type = "unlock-recipe",
