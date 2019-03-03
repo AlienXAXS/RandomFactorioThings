@@ -164,31 +164,5 @@ data:extend({
 		order = "c[splitter]-d[nuclear-splitter]",
 		place_result = "nuclear-splitter",
 		stack_size = 50
-	},
-	{
-		type = "mining-tool",
-		name = "nuclear-axe",
-		localised_description = {"item-description.mining-tool"},
-		icon = "__RandomFactorioThings__/graphics/icons/nuclear-axe.png",
-		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
-		action =
-		{
-			type="direct",
-			action_delivery =
-			{
-				type = "instant",
-				target_effects =
-				{
-					type = "damage",
-					damage = { amount = 12 , type = "physical"}
-				}
-			}
-		},
-		durability = 5000,
-		subgroup = "tool",
-		order = "a[mining]-c[nuclear-axe]",
-		speed = 10,
-		stack_size = 20
 	}
   })
